@@ -126,7 +126,7 @@ CSRF_COOKIE_SECURE = True
 # SSLIFY_DISABLE = True
 
 # CHANGE HOST
-EMAIL_HOST = 'mail.netcetera.co.uk'
+EMAIL_HOST = 'webmail.1and1.co.uk'
 EMAIL_HOST_USER = 'info@nuclearpowerplantconference.com'
 EMAIL_HOST_PASSWORD = os.environ['NUPP_password']
 EMAIL_PORT = 25
