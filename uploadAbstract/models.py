@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-from adWind.email_functionality import email_admin, email_client
+from NUPP.email_functionality import email_admin, email_client
 from django.db import models
 
 

@@ -205,18 +205,18 @@ body {
   font-size: medium;
 }
 .featurette-heading {
-  color: #4CAF50;
+  color: crimson;
 }
 .tab-disabled {
   opacity: 0.5;
 }
 #sidebarNav > li > a {
-  color: #4CAF50;
+  color: crimson;
 }
 #sidebar .nav > .active > a,
 #sidebar .nav > li > a:hover,
 #sidebar .nav > li > a:focus {
-  background-color: #4CAF50;
+  background-color: crimson;
   color: white;
 }
 .navbar {
@@ -243,14 +243,14 @@ body > div.navbar-wrapper > div > nav > div > div.navbar-header > a {
   position: fixed;
   bottom: 5%;
   left: 5%;
-  color: #4CAF50;
+  color: crimson;
 }
 body > div.back-to-top > a {
-  color: #4CAF50;
+  color: crimson;
 }
 .footer-title {
   text-align: center;
-  background: rgba(76, 175, 80, 0.2);
+  background: rgba(220, 20, 60, 0.2);
 }
 .center-text p {
   text-align: center;

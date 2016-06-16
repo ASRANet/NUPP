@@ -70,7 +70,7 @@ urlpatterns = [
     url(r'^uploadAbstract/', include('uploadAbstract.urls')),
     url(r'^authorinstructions/', 'mainApp.views.author_instructions', name='authorInstructions'),
     url(r'^cookies/', 'mainApp.views.cookies', name='cookies'),
-    url(r'^$', 'mainApp.views.index2', name='index2'),
+    url(r'^$', 'mainApp.views.index', name='index'),
     url(r'^index', 'mainApp.views.index', name='index'),
     url(r'^robots\.txt$', 'mainApp.views.robots', name='robots'),
     url(r'^otherconferences$', 'mainApp.views.otherconferences', name='otherconferences'),

@@ -12,10 +12,6 @@ def index(request):
                                           "page": "index"})
 
 
-def index2(request):
-    return render(request, 'index2.html')
-
-
 def venue(request):
     story_list = Item.objects.filter(page__name="venue").order_by('order')
     site_settings = SiteSetting.objects.all().first()

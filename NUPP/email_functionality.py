@@ -61,5 +61,5 @@ def email_admin(self, subject, text, sorted_self):
     string_buffer.close()
 
     msg = EmailMultiAlternatives(subject, text, "adwind@asranet.co.uk", ["adwind@asranet.co.uk"])
-    msg.attach(self.first_name + self.last_name + "adWind.pdf", pdf, "application/pdf")
+    msg.attach(self.first_name + self.last_name + "NUPP.pdf", pdf, "application/pdf")
     msg.send(fail_silently=True)

@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['adwind_key']
+SECRET_KEY = os.environ['NUPP_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'adwind2017.com', 'www.adwind2017.com']
+ALLOWED_HOSTS = ['localhost', 'nupp.nuclearpowerplantconference.com', 'www.nuclearpowerplantconference.com']
 
 # Application definition
 
@@ -56,7 +56,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'adWind.urls'
+ROOT_URLCONF = 'NUPP.urls'
 
 TEMPLATES = [
     {
@@ -77,7 +77,7 @@ TEMPLATES = [
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
-WSGI_APPLICATION = 'adWind.wsgi.application'
+WSGI_APPLICATION = 'NUPP.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
@@ -120,14 +120,15 @@ USE_L10N = True
 
 USE_TZ = True
 
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
-SSLIFY_DISABLE = True
+# SSLIFY_DISABLE = True
 
+# CHANGE HOST
 EMAIL_HOST = 'mail.netcetera.co.uk'
-EMAIL_HOST_USER = 'adwind@asranet.co.uk'
-EMAIL_HOST_PASSWORD = os.environ['adwind_password']
+EMAIL_HOST_USER = 'info@nuclearpowerplantconference.com'
+EMAIL_HOST_PASSWORD = os.environ['NUPP_password']
 EMAIL_PORT = 25
 
 # Static files (CSS, JavaScript, Images)

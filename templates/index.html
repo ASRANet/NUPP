@@ -12,22 +12,21 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img class="first-slide" src="{% static "Images/adwind1.jpg" %}" alt="First slide">
+                <img class="first-slide" src="{% static "Images/NUPP1.jpg" %}" alt="First slide">
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>{{ site_settings.site_name }}</h1>
-                        <p>{{ site_settings.location }}</p>
+                        <p>{{ site_settings.venue }}, {{ site_settings.location }}</p>
                         <p>{{ site_settings.start_date }} - {{ site_settings.end_date }}</p>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <img class="second-slide" src="{% static "Images/adwind2.jpg" %}" alt="Second slide">
+                <img class="second-slide" src="{% static "Images/NUPP2.jpg" %}" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption">
                         <h1 class="hidden-xs">{{ site_settings.site_name }}</h1>
                         <p>{{ site_settings.full_name }}</p>
-                        <p>In collaboration with National Institute of Wind Energy (NIWE)</p>
                         <a href="{% url 'register' %}" class="btn btn-lg btn-default hidden-xs">Register Now</a>
                     </div>
                 </div>

@@ -7,13 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Change this -->
     <meta name="description"
-          content={{ site_settings.full_name }}>
-    <meta name="keywords" content="bio-materials, biomaterials, conference, applications, 2017">
+          content="Register for ASRANet's 2017 Nuclear Power Plant Conference now. This conference presents the perfect
+          opportunity for you as it aims to provide an ideal platform for industry leading researchers, technology
+          developers, industrial players and supply chain partners to converge.">
+    <meta name="keywords" content="nuclear, power, plant, conference, nupp, 2017, technology, innovation,
+    industry, papers, research, ASRANet">
     <meta name="author" content="ASRANet">
     <meta name="google-site-verification" content="GhSMT2YCWklPbhw59aNgGcd3TYtqc8jNJ9k4uV5Ixng"/>
-    <link rel="icon" href="{% static "Images/favicon.jpg" %}">
+    <link rel="icon" href="{% static "Images/favicon.png" %}">
 
     <title>{{ site_settings.site_name }} - {% block title %}{% endblock %}</title>
 
@@ -68,8 +70,8 @@
                         <li><a href="{% url 'uploadAbstract' %}">Upload Abstract</a></li>
                         <li><a href="{% url 'authorInstructions' %}">Author Instructions</a></li>
                         <li><a href="{% url 'travel' %}">Travel</a></li>
-                        <!--li><a href="{% url 'accomodation' %}">Accommodation</a></li>
-                        <li><a href="{% url 'venue' %}">Venue</a></li-->
+                        <li><a href="{% url 'accomodation' %}">Accommodation</a></li>
+                        <li><a href="{% url 'venue' %}">Venue</a></li>
                         <li><a href="{% url 'contactus' %}">Contact Us</a></li>
                     </ul>
                 </div>
