@@ -35,7 +35,8 @@ function checkKeyDeadlines() {
             }
 
             else if (months.indexOf(newDate[0]) == month) {
-                if (newDate[1] < day) {
+
+                if (newDate[1].replace(",", "") < day) {
                     lastDeadline = index;
                     lastDeadlineChanged = true;
                 }
