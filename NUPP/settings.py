@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['NUPP_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', 'nupp.nuclearpowerplantconference.com', 'www.nuclearpowerplantconference.com']
 
@@ -45,8 +45,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE_CLASSES = [
-    # 'sslify.middleware.SSLifyMiddleware',
-    # 'django.middleware.security.SecurityMiddleware',
+    'sslify.middleware.SSLifyMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -120,9 +120,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
-SSLIFY_DISABLE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+# SSLIFY_DISABLE = True
 
 # CHANGE HOST
 EMAIL_HOST = 'mail.netcetera.co.uk'
