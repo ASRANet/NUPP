@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['NUPP_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'nupp.nuclearpowerplantconference.com', 'www.nuclearpowerplantconference.com']
 
@@ -120,14 +120,14 @@ USE_L10N = True
 
 USE_TZ = True
 
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 
-# SSLIFY_DISABLE = True
+SSLIFY_DISABLE = True
 
 # CHANGE HOST
-EMAIL_HOST = 'webmail.1and1.co.uk'
-EMAIL_HOST_USER = 'info@nuclearpowerplantconference.com'
+EMAIL_HOST = 'mail.netcetera.co.uk'
+EMAIL_HOST_USER = 'nupp@asranet.co.uk'
 EMAIL_HOST_PASSWORD = os.environ['NUPP_password']
 EMAIL_PORT = 25
 

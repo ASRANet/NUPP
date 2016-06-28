@@ -9,7 +9,7 @@ function checkKeyDeadlines() {
         {event: "Notification of acceptance", textDate: $("#acceptanceDeadline").text()},
         {event: "Submission of full papers", textDate: $("#papersDeadline").text()},
         {event: "Registration closes", textDate: $("#registrationDeadline").text()}];
-    var months = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "June", "July", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
+    var months = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
     var currentDate = new Date();
     var day = currentDate.getDate();
     var month = currentDate.getMonth();

@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 from NUPP.email_functionality import email_admin, email_client
 from django.db import models
+from mainApp.models import SiteSetting
 
 
 class SubmittedAbstract(models.Model):
@@ -20,9 +21,13 @@ class SubmittedAbstract(models.Model):
                        ["Paper Title", self.paper_title], ["Abstract", self.abstract],
                        ]
 
-        email_client(self, "AdWind 2017 Abstract Upload", "Thank you for uploading your abstract to AdWind 2017")
-        email_admin(self, "New AdWind 2017 Abstract", "Please find enclosed the details for the new AdWind "
-                                                      "2017 abstract upload.", sorted_self)
+        site_settings = SiteSetting.objects.all().first()
+
+        email_client(self, site_settings.site_name + "Abstract Upload", "Thank you for uploading your abstract to " +
+                     site_settings.site_name)
+        email_admin(self, "New " + site_settings.site_name + " Abstract",
+                    "Please find enclosed the details for the new " + site_settings.site_name + " abstract.",
+                    sorted_self)
 
         super(SubmittedAbstract, self).save(*args, **kwargs)
 

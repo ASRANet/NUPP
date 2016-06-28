@@ -7,6 +7,8 @@ from reportlab.platypus.doctemplate import SimpleDocTemplate
 from reportlab.platypus import Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 from django.http import HttpResponse
+from NUPP.settings import EMAIL_HOST_USER
+from mainApp.models import SiteSetting
 
 try:
     from cStringIO import StringIO
@@ -15,6 +17,7 @@ except ImportError:
 
 
 def email_client(self, subject, text):
+
     # Send the client an email
     html_content = render_to_string("../templates/baseTemplates/emailToUser.html", {'salutation': self.salutation,
                                                                                     'last_name':
@@ -22,7 +25,7 @@ def email_client(self, subject, text):
                                                                                     'text_body': text})
     msg = EmailMultiAlternatives(subject, 'Dear ' + self.salutation + ' ' +
                                  self.last_name + '/n' + text,
-                                 'info@nuclearpowerplantconference.com', [self.email], )
+                                 EMAIL_HOST_USER, [self.email], )
     msg.attach_alternative(html_content, "text/html")
     msg.attach_file('static/Images/ASRANet_Logo.png')
     msg.mixed_subtype = 'related'
@@ -33,10 +36,12 @@ def email_client(self, subject, text):
     fp.close()
     msg_img.add_header('Content-ID', '<{}>'.format(f))
     msg.attach(msg_img)
-    msg.send(fail_silently=True)
+    msg.send(fail_silently=False)
 
 
 def email_admin(self, subject, text, sorted_self):
+
+    site_name = SiteSetting.objects.all().first().site_name
 
     styleSheet = getSampleStyleSheet()
 
@@ -47,7 +52,7 @@ def email_admin(self, subject, text, sorted_self):
     string_buffer = StringIO()
 
     new_pdf = []
-    header = Paragraph("NUPP Attendee Details", styleSheet['Heading1'])
+    header = Paragraph(site_name + " Attendee Details", styleSheet['Heading1'])
     new_pdf.append(header)
 
     for element in sorted_self:
@@ -60,6 +65,6 @@ def email_admin(self, subject, text, sorted_self):
     pdf = string_buffer.getvalue()
     string_buffer.close()
 
-    msg = EmailMultiAlternatives(subject, text, "info@nuclearpowerplantconference.com", ["info@nuclearpowerplantconference.com"])
-    msg.attach(self.first_name + self.last_name + "NUPP.pdf", pdf, "application/pdf")
+    msg = EmailMultiAlternatives(subject, text, EMAIL_HOST_USER, [EMAIL_HOST_USER])
+    msg.attach(self.first_name + self.last_name + site_name + ".pdf", pdf, "application/pdf")
     msg.send(fail_silently=True)
