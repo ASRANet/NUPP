@@ -24,10 +24,13 @@ body {
 .other-conference-title {
   text-align: center;
   position: absolute;
+  left: 0;
   width: 100%;
   color: white;
   font-family: "Roboto", sans-serif;
-  font-size: xx-large;
+  background-color: rgba(168, 0, 33, 0.4);
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .other-conference {
   -webkit-transition: 0.5s ease-in-out;
@@ -41,6 +44,12 @@ body {
   left: 0;
 }
 .other-conference:hover {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+.other-conference-outer:hover > .other-conference {
   -webkit-filter: blur(3px);
   -moz-filter: blur(3px);
   -ms-filter: blur(3px);
