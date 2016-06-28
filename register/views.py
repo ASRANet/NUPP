@@ -20,3 +20,4 @@ def index(request):
         form = UserForm()
 
     return render(request, 'register/register.html', {'form': form, 'site_settings': site_settings})
+

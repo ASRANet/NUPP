@@ -1,14 +1,5 @@
-{% extends 'baseTemplates/base.html' %}
-{% load staticfiles %}
+{% extends 'baseTemplates/successPage.html' %}
 
-{% block title %}Abstract Uploaded - CORE 2016{% endblock %}
-
-{%  block body_block %}
-
-<div style="padding-top: 10%">
-
-        <div style="margin-bottom: 20%"><h1>Your abstract has been uploaded. Thank you.</h1></div>
-
-</div>
-
+{% block success_text %}
+Your abstract for {{ site_settings.site_name }} has been uploaded. Thank you.
 {% endblock %}
