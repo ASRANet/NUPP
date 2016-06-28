@@ -95,7 +95,7 @@ def contactus(request):
 
 def otherconferences(request):
     site_settings = SiteSetting.objects.all().first()
-    return render(request, 'otherconferences.html', {"site_settings": site_settings})
+    return render(request, 'otherConferences.html', {"site_settings": site_settings})
 
 
 def travel(request):
