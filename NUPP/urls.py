@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.contrib.sitemaps import Sitemap
 from django.core.urlresolvers import reverse
+from mainApp import views as main_views
 
 
 class HomeSitemap(Sitemap):
@@ -62,25 +63,19 @@ sitemaps = {
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^venue/', 'mainApp.views.venue', name='venue'),
-    url(r'^accomodation/', 'mainApp.views.accomodation', name='accomodation'),
-    url(r'^contactus/', 'mainApp.views.contactus', name='contactus'),
-    url(r'^travel/', 'mainApp.views.travel', name='travel'),
+    url(r'^venue/', main_views.venue, name='venue'),
+    url(r'^accomodation/', main_views.accomodation, name='accomodation'),
+    url(r'^contactus/', main_views.contactus, name='contactus'),
+    url(r'^travel/', main_views.travel, name='travel'),
     url(r'^register/', include('register.urls')),
     url(r'^uploadAbstract/', include('uploadAbstract.urls')),
-    url(r'^authorinstructions/', 'mainApp.views.author_instructions', name='authorInstructions'),
-    url(r'^cookies/', 'mainApp.views.cookies', name='cookies'),
-    url(r'^$', 'mainApp.views.index', name='index'),
-    url(r'^index', 'mainApp.views.index', name='index'),
-    url(r'^robots\.txt$', 'mainApp.views.robots', name='robots'),
-    url(r'^otherconferences$', 'mainApp.views.otherconferences', name='otherconferences'),
+    url(r'^authorinstructions/', main_views.author_instructions, name='authorInstructions'),
+    url(r'^cookies/', main_views.cookies, name='cookies'),
+    url(r'^$', main_views.index, name='index'),
+    url(r'^index', main_views.index, name='index'),
+    url(r'^robots\.txt$', main_views.robots, name='robots'),
+    url(r'^otherconferences$', main_views.otherconferences, name='otherconferences'),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
         name='django.contrib.sitemaps.views.sitemap'),
 ]
 
-if settings.DEBUG:
-    urlpatterns += patterns(
-        'django.views.static',
-        (r'^media/(?P<path>.*)',
-         'serve',
-         {'document_root': settings.MEDIA_ROOT}), )
