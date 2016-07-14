@@ -10,7 +10,7 @@ class SubmittedAbstract(models.Model):
     last_name = models.CharField(max_length=35)
     co_authors_names = models.CharField(max_length=770)
     email = models.EmailField(max_length=60, unique=True)
-    paper_title = models.CharField(max_length=60)
+    paper_title = models.CharField(max_length=300)
     abstract = models.CharField(max_length=2000)
 
     def save(self, *args, **kwargs):
