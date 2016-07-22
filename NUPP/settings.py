@@ -25,7 +25,7 @@ SECRET_KEY = os.environ['NUPP_key']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'nupp.nuclearpowerplantconference.com', 'www.nuclearpowerplantconference.com']
+ALLOWED_HOSTS = ['localhost', 'nupp.nuclearpowerplantconference.com', 'www.nuclearpowerplantconference.com', 'www.nupp.nuclearpowerplantconference.com']
 
 # Application definition
 
