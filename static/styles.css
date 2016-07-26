@@ -89,7 +89,7 @@ body {
 -------------------------------------------------- */
 /* Carousel base class */
 .carousel {
-  height: 40vw;
+  height: 50vw;
   margin-bottom: 5%;
 }
 /* Since positioning the image, we need to help out the caption */
