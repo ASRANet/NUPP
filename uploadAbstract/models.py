@@ -8,7 +8,7 @@ class SubmittedAbstract(models.Model):
     salutation = models.CharField(max_length=6)
     first_name = models.CharField(max_length=35)
     last_name = models.CharField(max_length=35)
-    organisation = models.CharField(max_length=100)
+    organization = models.CharField(max_length=90)
     co_authors_names = models.CharField(max_length=770)
     email = models.EmailField(max_length=60, unique=True)
     paper_title = models.CharField(max_length=300)
@@ -18,7 +18,7 @@ class SubmittedAbstract(models.Model):
 
         sorted_self = [["Salutation", self.salutation], ["Primary Author First Name", self.first_name],
                        ["Primary Author Surname", self.last_name],
-                       ["Organisation", self.organisation],
+                       ["Organization", self.organization],
                        ["Co Authors Names", self.co_authors_names], ["Email", self.email],
                        ["Paper Title", self.paper_title], ["Abstract", self.abstract],
                        ]

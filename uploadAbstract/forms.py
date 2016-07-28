@@ -10,7 +10,7 @@ class UserForm(forms.ModelForm):
                                    required=True)
     first_name = forms.CharField(max_length=35)
     last_name = forms.CharField(max_length=35)
-    organisation = forms.CharField(max_length=100)
+    organization = forms.CharField(max_length=90)
     co_authors_names = forms.CharField(max_length=770, required=False, help_text="Separate each author with a comma")
     email = forms.EmailField(max_length=60, required=True)
     paper_title = forms.CharField(max_length=300, required=True)
@@ -22,5 +22,5 @@ class UserForm(forms.ModelForm):
 
     class Meta:
         model = SubmittedAbstract
-        fields = ('salutation', 'first_name', 'last_name', 'organisation',
+        fields = ('salutation', 'first_name', 'last_name', 'organization',
                   'co_authors_names', 'email', 'paper_title', 'abstract')

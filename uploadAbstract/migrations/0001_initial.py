@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     dependencies = [
     ]
 
-    operations = [
+    operations = {
         migrations.CreateModel(
             name='SubmittedAbstract',
             fields=[
@@ -20,11 +20,11 @@ class Migration(migrations.Migration):
                 ('salutation', models.CharField(max_length=6)),
                 ('first_name', models.CharField(max_length=35)),
                 ('last_name', models.CharField(max_length=35)),
-                ('organisation', models.CharField(max_length=100)),
+                ('organization', models.CharField(max_length=90)),
                 ('co_authors_names', models.CharField(max_length=770)),
                 ('email', models.EmailField(max_length=60, unique=True)),
                 ('paper_title', models.CharField(max_length=300)),
                 ('abstract', models.CharField(max_length=2000)),
             ],
         ),
-    ]
+    }
