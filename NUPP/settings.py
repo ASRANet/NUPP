@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['NUPP_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', 'nupp.nuclearpowerplantconference.com', 'www.nuclearpowerplantconference.com', 'www.nupp.nuclearpowerplantconference.com']
 
