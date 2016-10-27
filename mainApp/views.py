@@ -43,7 +43,7 @@ def author_instructions(request):
                   {"headline": "Author Information",
                   "id": "AuthorInformation",
                    "table_class":
-                       "<ul><li>Please submit all papers by 22 July 2016 by emailing them to us. If you are worried "
+                       "<ul><li>Please submit all papers by 4th January 2017 by emailing them to us. If you are worried "
                        "about making the deadline then please contact us, so that an extension can be arranged.</li>"
                        "<br>"
                        "<li><a href='/static/paperFormat.doc'>Here is the official template</a> to use for all papers."
