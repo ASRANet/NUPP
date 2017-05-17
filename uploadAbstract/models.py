@@ -25,9 +25,9 @@ class SubmittedAbstract(models.Model):
 
         site_settings = SiteSetting.objects.all().first()
 
-        email_client(self, site_settings.site_name + "Abstract Upload", "Thank you for uploading your abstract to NUPP 2017")
+        email_client(self, site_settings.site_name + "Abstract Upload", "Thank you for uploading your abstract to NUPP 2018")
         email_admin(self, "New " + site_settings.site_name + " Abstract",
-                    "Please find enclosed the details for the new NUPP 2017 abstract.",
+                    "Please find enclosed the details for the new NUPP 2018 abstract.",
                     sorted_self)
 
         super(SubmittedAbstract, self).save(*args, **kwargs)
